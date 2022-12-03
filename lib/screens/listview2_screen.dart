@@ -12,21 +12,15 @@ class Listview2Screen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Listview tipo 2'),
       ),
-      body: ListView(
-        children: [
-          ...opcions.map((e) => ListTile(
+      body: ListView.separated(
+        itemBuilder:(context, index) => ListTile(
             leading: const Icon(Icons.ac_unit_outlined),
             trailing: const Icon(Icons.arrow_forward_ios),
-            title:   Text(e),
+            title:   Text(opcions[index]),
            
-          )
-          ).toList(),
-           const Divider()
-
-         
-        
-        ],
-      )
+          ),
+        separatorBuilder:(_, __) => const Divider(), 
+        itemCount: opcions.length)
     );
   }
 } 
