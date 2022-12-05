@@ -17,15 +17,28 @@ class AppRoutes {
     MenuOption(route: 'alert',  name:'Alert Screen', screen: const AlertScreen(), icon: Icons.sim_card_alert_outlined),
     MenuOption(route: 'card',  name:'Card Screen', screen: const CardScreen(), icon: Icons.card_giftcard)
   ];
+
+  static Map<String, Widget Function(BuildContext)> getAppRoutes(){
+      Map<String, Widget Function(BuildContext)> appRoutes ={};
+
+        for(final option in menuOption){
+          appRoutes.addAll({option.route:(context) => option.screen});
+        }
+      return appRoutes;
+  }
+
+
+
+
 //Si se quisiese trabajar con modelo de rutas se usaria algo asi
- static Map<String, Widget Function(BuildContext)> routes = {
-        'home'     : ((context) => const HomeScreen()),
-        'listview1': ((context) => const Listview1Screen()),
-        'listview2': ((context) => const Listview2Screen()),
-        'alert'    : ((context) => const AlertScreen()),
-        'card'     : ((context) => const CardScreen())
+//  static Map<String, Widget Function(BuildContext)> routes = {
+//         'home'     : ((context) => const HomeScreen()),
+//         'listview1': ((context) => const Listview1Screen()),
+//         'listview2': ((context) => const Listview2Screen()),
+//         'alert'    : ((context) => const AlertScreen()),
+//         'card'     : ((context) => const CardScreen())
         
-      };
+//       };
  static Route<dynamic> onGenerateRoute (RouteSettings settings) {
         return MaterialPageRoute(
           builder:(context) => const AlertScreen()
