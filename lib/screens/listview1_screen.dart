@@ -15,7 +15,8 @@ class Listview1Screen extends StatelessWidget {
       body: ListView(
         children: [
           ...opcions.map((e) => ListTile(
-            leading: const Icon(Icons.ac_unit_outlined),
+            //leading: const Icon(Icons.ac_unit_outlined),
+            leading: Text('${opcions.indexOf(e)+1}'),
             trailing: const Icon(Icons.arrow_forward_ios),
             title:   Text(e),
            
