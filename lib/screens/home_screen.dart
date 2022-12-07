@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
             /* final route = MaterialPageRoute(builder:(context) => const Listview2Screen(),);
             Navigator.pushReplacement(context, route); */
             Navigator.pushNamed(context, AppRoutes.menuOption[index].route);
+           
             //push.Named solo necesita recibir como argumento alguna ruta valida establecida
           },
         ), 
