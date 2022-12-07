@@ -10,7 +10,23 @@ class AppTheme {
         appBarTheme: const AppBarTheme(
           color: primary,
           elevation: 0
-        )
+        ),
+        // Text Button Theme
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(foregroundColor: primary)
+        ),
+        //Floating Action Button
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: primary
+        ),
+        //Elevated Button
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom( 
+            backgroundColor: primary,
+            shape: const StadiumBorder(),
+            elevation: 0
+            )
+          )
       );
    static final ThemeData darkTheme = ThemeData.dark().copyWith(
         //color primario
