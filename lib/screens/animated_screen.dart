@@ -21,13 +21,14 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
     final random = Random();
     _width = random.nextInt(300).toDouble()+70;
     _height =random.nextInt(300).toDouble()+70;
+
     _color = Color.fromRGBO(
       random.nextInt(255),
       random.nextInt(255),
       random.nextInt(255),
       1
     );
-_borderRadius =BorderRadius.circular(random.nextInt(100).toDouble()+10);
+    _borderRadius =BorderRadius.circular(random.nextInt(100).toDouble()+10);
     setState(() {});
   }
 
@@ -41,12 +42,12 @@ _borderRadius =BorderRadius.circular(random.nextInt(100).toDouble()+10);
          child: AnimatedContainer(
           curve: Curves.easeOutCubic,
           width: _width,
-          height: _height,
-          
+          height: _height,          
           decoration: BoxDecoration(
-            color: _color,
-            borderRadius: _borderRadius
-             ), duration: const Duration(milliseconds: 400),
+              color: _color,
+              borderRadius: _borderRadius
+             ), 
+          duration: const Duration(milliseconds: 400),
          ),
       ),
       floatingActionButton: FloatingActionButton(

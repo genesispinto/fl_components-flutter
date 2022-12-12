@@ -11,7 +11,7 @@ class AppRoutes {
   static const initialRoute = 'home';
   // Listado de opciones con la ruta definida
   static final menuOption = <MenuOption>[
-    //MenuOption(route: 'home',  name:'Home Screen', screen: const HomeScreen(), icon: Icons.home),
+    MenuOption(route: 'inputs',  name:'Text Inputs', screen: const InputsScreen(), icon: Icons.input_outlined),
     MenuOption(route: 'listview1',  name:'listview tipo 1', screen: const Listview1Screen(), icon: Icons.light_mode_sharp),
     MenuOption(route: 'listview2',  name:'listview tipo 2', screen: const Listview2Screen(), icon: Icons.monetization_on),
     MenuOption(route: 'alert',  name:'Alert Screen', screen: const AlertScreen(), icon: Icons.sim_card_alert_outlined),
