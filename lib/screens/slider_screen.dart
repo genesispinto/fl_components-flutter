@@ -62,7 +62,7 @@ class _SliderScreenState extends State<SliderScreen> {
               subtitle: const Text('Habilitar Slider') ,
               value: _sliderEnabled, 
               onChanged: ((value) {
-              _sliderEnabled =value ?? true;
+              _sliderEnabled =value;
               setState(() {});
             }) ),
           Image(
